@@ -6,7 +6,12 @@
     <title>IAKA</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="config.js"></script>
+    <script>
+    (function(){
+      emailjs.init("SrlIr4W6aUch1ayEs"); 
+    })();
+  </script>
+    
     <script>
         tailwind.config = {
             darkMode: 'class',
@@ -42,6 +47,16 @@
                     <p class="text-xl text-gray-300 mb-8">
                         Oubliez le cloud, protégez vos données et vos clients. Offrez vous un serveur hébergé dans vos locaux.
                         Devenez souverains dans votre usage de l'IA.
+                    </p>
+                    <p class="text-xl text-gray-300 mb-8">
+                        IAKA offre également des services de conseil et de foramtion aux nouveaux outils
+                    </p>
+                    
+                    <p class="text-xl text-gray-300 mb-8">
+                        IAKA s'appuie systématiquement sur des outils OpenSource.
+                    </p>
+                    <p class="text-xl text-gray-300 mb-8">
+                       ♻️ Nos serveurs peuvent contenir des éléménts reconditionnés.♻️
                     </p>
                     
                 </div>
@@ -82,12 +97,24 @@
   </section>
 </main>
 
-    
+<script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const statusMessage = document.getElementById("statusMessage");
 
-    <!-- <script src="components/navbar.js"></script>
-    <script src="components/footer.js"></script>
-    <script src="script.js"></script>
-    <script>feather.replace();</script> -->
-<!-- <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script> -->
+      emailjs.sendForm(emailJsConfig.SERVICE_ID, emailJsConfig.TEMPLATE_ID, this)
+        .then(() => {
+          statusMessage.textContent = "✅ Message envoyé avec succès !";
+          statusMessage.className = "text-green-600 font-semibold text-center";
+          this.reset();
+        }, (error) => {
+          statusMessage.textContent = "❌ Erreur lors de l'envoi : " + error.text;
+          statusMessage.className = "text-red-600 font-semibold text-center";
+        });
+    });
+  </script>
+    <script src="config.js"></script>
+  <script src="js/include.js"></script>
+
 </body>
 </html>

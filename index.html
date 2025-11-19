@@ -1,29 +1,133 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site de Yaka</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>École de Maths en Ligne</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("SrlIr4W6aUch1ayEs"); 
+    })();
+  </script>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f4f4;
-        }
-        .welcome-text {
-            font-size: 2.5em;
-            color: #333;
-            text-align: center;
-        }
-    </style>
+    /* Définition de l'animation de clignotement */
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1; /* Pleine visibilité au début et à la fin */
+      }
+      50% {
+        opacity: 0.3; /* Très transparent au milieu */
+      }
+    }
+    
+    /* Application de l'animation à une classe CSS */
+    .btn-blink {
+      animation: blink 3s ease-in-out infinite; /* Nom, durée, type de rythme, répétition */
+    }
+  </style>
 </head>
-<body>
-    <div class="welcome-text">
-        Bienvenue sur le site de Yaka
+<body class="bg-gray-100 text-gray-800">
+<div id="header"></div>
+  <!-- SECTION HERO -->
+  <section class="bg-blue-50 py-20 text-center">
+    <h2 class="text-3xl font-bold mb-4">Apprenez les maths, la physique la chimie en ligne 🚀</h2>
+    <h2 class="text-3xl font-bold mb-4"></h2>
+    <p class="bg-primary text-lg mb-6">Accés gratuit au serveur Discord:</p>
+    <a href="https://discord.com/channels/1127205424370810902/1127205425012555873" 
+    class="w-24 h-24 inline-block hover:opacity-80 transition duration-300 focus:outline-none">
+  
+  <button class="w-full h-full p-0 bg-transparent border-none cursor-pointer">
+    <img src="discordd.jpeg" alt="Description du bouton" class="w-full h-full object-cover rounded-lg btn-blink">
+  </button>
+  
+</a>
+  </section>
+
+  <!-- SECTION CONTENU -->
+  <main class="container mx-auto p-6 grid md:grid-cols-3 gap-6">
+  
+     <a href="annex.html" class="block">
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Quelques pépites</h3>
+        <p>Des outils pour aimer les maths et les sciences</p>
+      </div>
+    </a>
+   
+
+     <a href="trinket.html" class="block">
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Les cours </h3>
+        <p>Ici des grands classiques à connaître</p>
+      </div>
+    </a>
+    
+    <a href="trinket.html" class="block">
+      <div class="bg-white rounded-lg shadow p-6 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Code en Python directement depuis to navigateur</h3>
+        <p>Pas d'installation sur ta machine</p>
+      </div>
+    </a>
+
+  </main>
+
+  <!-- SECTION CONTACT -->
+  <section id="contact" class="bg-gray-100 py-10">
+    <div class="container mx-auto max-w-lg">
+      <h3 class="text-2xl font-bold mb-4 text-center">Formulaire de contact</h3>
+      <p class="mb-6 text-center">Vous souhaitez des informations, réserver un cours?</p>
+      <p class="mb-6 text-center">C'est par là que ça se passe ⬇️</p>
+      <form id="contactForm" class="bg-white p-6 rounded-lg shadow space-y-4">
+        <div>
+          <label class="block text-left font-medium mb-1">Votre nom</label>
+          <input type="text" name="user_name" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div>
+          <label class="block text-left font-medium mb-1">Votre email</label>
+          <input type="email" name="user_email" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600">
+        </div>
+        <div>
+          <label class="block text-left font-medium mb-1">Message</label>
+          <textarea name="message" rows="5" required
+            class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+        </div>
+        <button type="submit"
+          class="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-800 transition">
+          Envoyer
+        </button>
+      </form>
+
+      <p id="statusMessage" class="mt-4 text-center font-semibold"></p>
     </div>
+  </section>
+
+ 
+  <div id="footer"></div>
+
+  <script src="config.js"></script>
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const statusMessage = document.getElementById("statusMessage");
+
+      emailjs.sendForm(emailJsConfig.SERVICE_ID, emailJsConfig.TEMPLATE_ID, this)
+        .then(() => {
+          statusMessage.textContent = "✅ Message envoyé avec succès !";
+          statusMessage.className = "text-green-600 font-semibold text-center";
+          this.reset();
+        }, (error) => {
+          statusMessage.textContent = "❌ Erreur lors de l'envoi : " + error.text;
+          statusMessage.className = "text-red-600 font-semibold text-center";
+        });
+    });
+  </script>
+  <script src="js/include.js"></script>
+
 </body>
 </html>
+

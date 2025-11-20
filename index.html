@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAKA</title>
-
-    
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
@@ -37,189 +36,194 @@
     </script>
     <style>
         @keyframes fade {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
         }
 
         .hero-title {
-    animation: fade 6s infinite;
-}
+            animation: fade 6s infinite;
+        }
 
-@media (prefers-reduced-motion: reduce) {
-    .hero-title {
-        animation: none;
-    }
-}
-        
-        </style>
+        @media (prefers-reduced-motion: reduce) {
+            .hero-title {
+                animation: none;
+            }
+        }
+    </style>
 
     <!-- EmailJS init -->
     <script>
-        (function(){
-            emailjs.init("SrlIr4W6aUch1ayEs"); 
-        })();
+            (function () {
+                emailjs.init("SrlIr4W6aUch1ayEs");
+            })();
     </script>
 
 </head>
 
 <body class="bg-gray-900 text-gray-100 min-h-screen">
-  
-    
-<main class="container mx-auto px-4 py-12">
 
+    <main class="container mx-auto px-4 py-12">
 
-    <!-- HERO -->
-    <section class="hero mb-20">
-        <div class="md:w-1/2 flex justify-center">
-            
-            <h1 class="hero-title text-6xl md:text-9xl lg:text-[12rem] leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
-            IAKA
-            </h1>
-        </div>
-        
-        
-        <div class="flex flex-col md:flex-row items-center gap-12">
-            
-            <div class="md:w-1/2">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                    Devenez maîtres de vos propres IA.
+        <!-- HERO -->
+        <section class="hero mb-20 flex justify-center items-center">
+            <div class="text-center">
+                
+                <h1 class="hero-title text-6xl md:text-9xl lg:text-[12rem] py-10 leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
+                    IAKA
                 </h1>
-                <p class="text-xl text-gray-300 mb-8">
+                <h1 class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                    Devenez maîtres du jeu avec vos propres IA en local
+                </h1>
+                <p class="text-2xl text-gray-300 mb-8">
                     Oubliez le cloud, protégez vos données et vos clients. Offrez-vous un serveur hébergé dans vos locaux.
                 </p>
-                <p class="text-xl text-gray-300 mb-8">
-                    IAKA offre également des services de conseil et de formation dans ce secteur ultra dynamique.
+                
+                <p class="text-2xl text-gray-300 mb-8">
+                    IAKA offre également des services de conseil et de formation sur l'IA.
                 </p>
-                <p class="text-xl text-gray-300 mb-8">
-                    IAKA s'appuie systématiquement sur des outils OpenSource.
-                </p>
-                <p class="text-xl text-gray-300 mb-8">
+                <!-- <p class="text-2xl text-gray-300 mb-8">
+                    IAKA s'appuie uniquement sur des outils OpenSource.
+                </p> -->
+                
+                <p class="text-2xl text-gray-300 mb-8 inline-flex items-center gap-3">
+    <img src="linux.png" class="w-10 h-10" alt="">
+    IAKA s'appuie uniquement sur des outils OpenSource.
+    <img src="linux.png" class="w-10 h-10" alt="">
+</p>
+
+
+                <p class="text-2xl text-gray-300 mb-8">
                     ♻️ Nos serveurs peuvent contenir des éléments reconditionnés. ♻️
                 </p>
             </div>
+        </section>
 
-            <div class="md:w-1/2">
-                <img src="matrix.gif" alt="Dark Mode Illustration" class="rounded-xl shadow-2xl border border-gray-800">
-            </div>
-        </div>
-    </section>
+        <!-- CONTACT FORM -->
+        <section id="contact" class="bg-gray-800 py-16 border-t border-gray-700">
+            <div class="container mx-auto max-w-lg">
 
-    <!-- CONTACT FORM -->
-    <section id="contact" class="bg-gray-800 py-16 border-t border-gray-700">
-        <div class="container mx-auto max-w-lg">
+                <h3
+                    class="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                    Formulaire de contact
+                </h3>
 
-            <h3 class="text-3xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                Formulaire de contact
-            </h3>
+                <p class="mb-6 text-center text-gray-300">Vous souhaitez nous contacter ? Réserver une démo ?</p>
+                <p class="mb-8 text-center text-gray-400">C'est par ici ⬇️</p>
 
-            <p class="mb-6 text-center text-gray-300">Vous souhaitez nous contacter ? Réserver une démo ?</p>
-            <p class="mb-8 text-center text-gray-400">C'est par ici ⬇️</p>
+                <form id="contactForm" class="bg-gray-700 p-8 rounded-xl shadow-xl space-y-4 border border-gray-600">
 
-            <form id="contactForm" class="bg-gray-700 p-8 rounded-xl shadow-xl space-y-4 border border-gray-600">
-                
-                <div>
-                    <label class="block font-medium mb-2 text-gray-300">Votre nom</label>
-                    <input type="text" name="user_name" required
-                           class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500">
-                </div>
+                    <div>
+                        <label class="block font-medium mb-2 text-gray-300">Votre nom</label>
+                        <input type="text" name="user_name" required
+                            class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500">
+                    </div>
 
-                <div>
-                    <label class="block font-medium mb-2 text-gray-300">Votre email</label>
-                    <input type="email" name="user_email" required
-                           class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500">
-                </div>
+                    <div>
+                        <label class="block font-medium mb-2 text-gray-300">Votre email</label>
+                        <input type="email" name="user_email" required
+                            class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500">
+                    </div>
 
-                <div>
-                    <label class="block font-medium mb-2 text-gray-300">Message</label>
-                    <textarea name="message" rows="5" required
-                              class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500"></textarea>
-                </div>
+                    <div>
+                        <label class="block font-medium mb-2 text-gray-300">Message</label>
+                        <textarea name="message" rows="5" required
+                            class="w-full bg-gray-800 border border-gray-600 text-gray-100 rounded-lg px-4 py-3 focus:ring-2 focus:ring-primary-500"></textarea>
+                    </div>
 
-                <button type="submit"
+                    <button type="submit"
                         class="w-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-semibold py-3 rounded-lg hover:opacity-90">
-                    Envoyer
-                </button>
-            </form>
+                        Envoyer
+                    </button>
+                </form>
 
-            <p id="statusMessage" class="mt-6 text-center font-semibold text-gray-300"></p>
-        </div>
-    </section>
+                <p id="statusMessage" class="mt-6 text-center font-semibold text-gray-300"></p>
+            </div>
+        </section>
 
 
 
-</main>
+    </main>
 
-<!-- FOOTER -->
-<footer class="bg-gray-800 border-t border-gray-700 mt-20 py-10">
-    <div class="container mx-auto px-4">
+    <!-- FOOTER -->
+    <footer class="bg-gray-800 border-t border-gray-700 mt-20 py-10">
+        <div class="container mx-auto px-4">
 
-        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
 
-            <!-- Logo / Nom -->
-            <h2 class="text-3xl font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                IAKA
-            </h2>
+                <!-- Logo / Nom -->
+                <h2
+                    class="text-3xl font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                    IAKA
+                </h2>
 
-            <!-- Navigation -->
-            <nav class="flex gap-6 text-gray-300">
-                <a href="#contact" class="hover:text-primary-500 transition">Contact</a>
-                <a href="#" class="hover:text-primary-500 transition">À propos</a>
-                <a href="#" class="hover:text-primary-500 transition">Services</a>
-            </nav>
+                <!-- Navigation -->
+                <nav class="flex gap-6 text-gray-300">
+                    <a href="#contact" class="hover:text-primary-500 transition">Contact</a>
+                    <a href="#" class="hover:text-primary-500 transition">À propos</a>
+                    <a href="#" class="hover:text-primary-500 transition">Services</a>
+                </nav>
 
-            <!-- Réseaux sociaux -->
-            <div class="flex gap-6 text-gray-300">
-                <a href="#" class="hover:text-secondary-500 transition" aria-label="Twitter">
-                    <i data-feather="twitter"></i>
-                </a>
-                <a href="#" class="hover:text-secondary-500 transition" aria-label="GitHub">
-                    <i data-feather="github"></i>
-                </a>
-                <a href="#" class="hover:text-secondary-500 transition" aria-label="Mail">
-                    <i data-feather="mail"></i>
-                </a>
+                <!-- Réseaux sociaux -->
+                <div class="flex gap-6 text-gray-300">
+                    <a href="#" class="hover:text-secondary-500 transition" aria-label="Twitter">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-secondary-500 transition" aria-label="GitHub">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="hover:text-secondary-500 transition" aria-label="Mail">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Ligne séparatrice -->
+            <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+                © 2025 IAKA — Tous droits réservés.
             </div>
         </div>
+    </footer>
 
-        <!-- Ligne séparatrice -->
-        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
-            © 2025 IAKA — Tous droits réservés.
-        </div>
-    </div>
-</footer>
-
-<script>
-    // Recharge feather icons une fois le footer inséré
-    feather.replace();
-</script>
+    <script>
+        // Recharge feather icons une fois le footer inséré
+        feather.replace();
+    </script>
 
 
 
-<!-- Load config BEFORE email sending script -->
-<script src="config.js"></script>
+    <!-- Load config BEFORE email sending script -->
+    <script src="config.js"></script>
 
-<!-- Contact form logic -->
-<script>
-document.getElementById("contactForm").addEventListener("submit", function(e) {
+    <!-- Contact form logic -->
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function (e) {
 
-    e.preventDefault();
-    const statusMessage = document.getElementById("statusMessage");
+            e.preventDefault();
+            const statusMessage = document.getElementById("statusMessage");
 
-    emailjs.sendForm(emailJsConfig.SERVICE_ID, emailJsConfig.TEMPLATE_ID, this)
-    .then(() => {
-        statusMessage.textContent = "✅ Message envoyé avec succès !";
-        statusMessage.className = "text-green-500 font-semibold text-center";
-        this.reset();
-    })
-    .catch((error) => {
-        statusMessage.textContent = "❌ Erreur lors de l'envoi : " + error.text;
-        statusMessage.className = "text-red-500 font-semibold text-center";
-    });
+            emailjs.sendForm(emailJsConfig.SERVICE_ID, emailJsConfig.TEMPLATE_ID, this)
+                .then(() => {
+                    statusMessage.textContent = "✅ Message envoyé avec succès !";
+                    statusMessage.className = "text-green-500 font-semibold text-center";
+                    this.reset();
+                })
+                .catch((error) => {
+                    statusMessage.textContent = "❌ Erreur lors de l'envoi : " + error.text;
+                    statusMessage.className = "text-red-500 font-semibold text-center";
+                });
 
-});
-</script>
+        });
+    </script>
 
-<script src="js/include.js"></script>
+    <script src="js/include.js"></script>
 
 </body>
+
 </html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IAKA</title>
+
     
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,6 +35,23 @@
             }
         }
     </script>
+    <style>
+        @keyframes fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .hero-title {
+    animation: fade 6s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-title {
+        animation: none;
+    }
+}
+        
+        </style>
 
     <!-- EmailJS init -->
     <script>
@@ -45,15 +63,26 @@
 </head>
 
 <body class="bg-gray-900 text-gray-100 min-h-screen">
-
+  
+    
 <main class="container mx-auto px-4 py-12">
+
 
     <!-- HERO -->
     <section class="hero mb-20">
+        <div class="md:w-1/2 flex justify-center">
+            
+            <h1 class="hero-title text-6xl md:text-9xl lg:text-[12rem] leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
+            IAKA
+            </h1>
+        </div>
+        
+        
         <div class="flex flex-col md:flex-row items-center gap-12">
+            
             <div class="md:w-1/2">
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                    Devenez maîtres de vos LLMs
+                    Devenez maîtres de vos propres IA.
                 </h1>
                 <p class="text-xl text-gray-300 mb-8">
                     Oubliez le cloud, protégez vos données et vos clients. Offrez-vous un serveur hébergé dans vos locaux.
@@ -116,7 +145,54 @@
         </div>
     </section>
 
+
+
 </main>
+
+<!-- FOOTER -->
+<footer class="bg-gray-800 border-t border-gray-700 mt-20 py-10">
+    <div class="container mx-auto px-4">
+
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <!-- Logo / Nom -->
+            <h2 class="text-3xl font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                IAKA
+            </h2>
+
+            <!-- Navigation -->
+            <nav class="flex gap-6 text-gray-300">
+                <a href="#contact" class="hover:text-primary-500 transition">Contact</a>
+                <a href="#" class="hover:text-primary-500 transition">À propos</a>
+                <a href="#" class="hover:text-primary-500 transition">Services</a>
+            </nav>
+
+            <!-- Réseaux sociaux -->
+            <div class="flex gap-6 text-gray-300">
+                <a href="#" class="hover:text-secondary-500 transition" aria-label="Twitter">
+                    <i data-feather="twitter"></i>
+                </a>
+                <a href="#" class="hover:text-secondary-500 transition" aria-label="GitHub">
+                    <i data-feather="github"></i>
+                </a>
+                <a href="#" class="hover:text-secondary-500 transition" aria-label="Mail">
+                    <i data-feather="mail"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Ligne séparatrice -->
+        <div class="border-t border-gray-700 mt-8 pt-6 text-center text-gray-400 text-sm">
+            © 2025 IAKA — Tous droits réservés.
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Recharge feather icons une fois le footer inséré
+    feather.replace();
+</script>
+
 
 
 <!-- Load config BEFORE email sending script -->

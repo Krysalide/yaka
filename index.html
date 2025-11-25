@@ -57,6 +57,17 @@
             }
         }
     </style>
+    <!-- <style>
+        /* Style du curseur (barre verticale) */
+#typing-title.cursor::after {
+    content: '|'; /* Le caractère du curseur */
+    display: inline;
+    margin-left: 5px;
+    font-weight: 300; /* Pour qu'il ne soit pas trop épais */
+    color: #4B5563; /* Couleur du curseur (ajustez selon votre palette) */
+    /* L'animation de clignotement est gérée par la fonction JavaScript setInterval */
+}
+    </style> -->
 
     <!-- EmailJS init -->
     <script>
@@ -79,10 +90,15 @@
                     class="hero-title text-6xl md:text-9xl lg:text-[12rem] py-10 leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
                     IAKA
                 </h1>
-                <h1
+                <h1 id="typing-title"
+    class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+    </h1>
+
+<script src="typing_effect.js"></script>
+                <!-- <h1
                     class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
                     Devenez maîtres du jeu avec vos propres IA en local
-                </h1>
+                </h1> -->
                 <p class="text-3xl text-primary-300 mb-8">
                     Oubliez le cloud, protégez vos données et vos clients. Offrez-vous un serveur hébergé dans vos
                     locaux.
@@ -106,6 +122,10 @@
 
             </div>
         </section>
+        <!-- <section class="h-[60vh] overflow-hidden">
+        <video src="video.mp4" loop autoplay muted class="w-full h-full object-cover"></video>
+
+        </section> -->
 
         <p class="mb-6 text-4xl text-center text-gray-300">Vous souhaitez nous contacter ? Réserver une démo ?</p>
                 <p class="mb-8 text-4xl text-center text-gray-400">C'est par ici ⬇️</p>

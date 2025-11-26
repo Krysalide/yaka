@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Paramètres
     const typingSpeed = 50;    // Vitesse de frappe (ms)
-    const deletingSpeed = 1;  // Vitesse d'effacement (ms)
-    const delayBeforeDelete = 1500; // Pause avant d'effacer (ms)
-    const delayBeforeType = 50;    // Pause avant de recommencer la frappe (ms)
+    const deletingSpeed = 50;  // Vitesse d'effacement (ms)
+    const delayBeforeDelete = 5000; // Pause avant d'effacer (ms)
+    const delayBeforeType = 0;    // Pause avant de recommencer la frappe (ms)
 
     let charIndex = 0;
     let isTyping = true; // Pour alterner entre les modes frappe et effacement

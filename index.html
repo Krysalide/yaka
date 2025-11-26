@@ -57,19 +57,7 @@
             }
         }
     </style>
-    <!-- <style>
-        /* Style du curseur (barre verticale) */
-#typing-title.cursor::after {
-    content: '|'; /* Le caractère du curseur */
-    display: inline;
-    margin-left: 5px;
-    font-weight: 300; /* Pour qu'il ne soit pas trop épais */
-    color: #4B5563; /* Couleur du curseur (ajustez selon votre palette) */
-    /* L'animation de clignotement est gérée par la fonction JavaScript setInterval */
-}
-    </style> -->
 
-    <!-- EmailJS init -->
     <script>
             (function () {
                 emailjs.init("SrlIr4W6aUch1ayEs");
@@ -90,22 +78,16 @@
                     class="hero-title text-6xl md:text-9xl lg:text-[12rem] py-10 leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
                     IAKA
                 </h1>
-                <h1 id="typing-title"
-    class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-    </h1>
 
-<script src="typing_effect.js"></script>
-                <!-- <h1
-                    class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                    Devenez maîtres du jeu avec vos propres IA en local
-                </h1> -->
+                <h1 id="typing-title"
+                    class="text-4xl py-8 md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent min-h-[3.5rem] md:min-h-[4rem]">
+                </h1>
+
+                <script src="typing_effect.js"></script>
+
                 <p class="text-3xl text-primary-300 mb-8">
                     Oubliez le cloud, protégez vos données et vos clients. Offrez-vous un serveur hébergé dans vos
                     locaux.
-                </p>
-
-                <p class="text-3xl text-primary-300 mb-8">
-                    IAKA offre également des services de conseil et de formation sur l'IA.
                 </p>
 
                 <p class="text-3xl text-primary-300 mb-8 inline-flex items-center gap-3">
@@ -115,20 +97,25 @@
                 </p>
 
                 <p class="text-3xl text-primary-300 mb-8">
-                    ♻️Vous souhaitez limiter votre impact sur l'environement ?
-                    Nous proposons des serveurs avec des éléments reconditionnés ♻️
+                    ♻️ Vous souhaitez limiter votre impact sur l'environement ? ♻️
+                </p>
+                <p class="text-3xl text-primary-300 mb-8">
+                    ♻️ Nous proposons des serveurs avec des éléments reconditionnés ♻️
+                </p>
+
+                <p class="text-3xl text-primary-300 mb-8 inline-flex items-center gap-3">
+                    <img src="diplome.png" class="w-10 h-10" alt="">
+                    IAKA offre également des services de conseil et de formation sur l'IA.
+                    <img src="diplome.png" class="w-10 h-10" alt="">
                 </p>
 
 
             </div>
         </section>
-        <!-- <section class="h-[60vh] overflow-hidden">
-        <video src="video.mp4" loop autoplay muted class="w-full h-full object-cover"></video>
 
-        </section> -->
 
-        <p class="mb-6 text-4xl text-center text-gray-300">Vous souhaitez nous contacter ? Réserver une démo ?</p>
-                <p class="mb-8 text-4xl text-center text-gray-400">C'est par ici ⬇️</p>
+        <p class="mb-6 text-4xl text-center text-gray-300">Vous souhaitez nous contacter ? Réserver une démo ? </p>
+        <!-- <p class="mb-8 text-4xl text-center text-gray-400">⬇️</p> -->
 
         <!-- CONTACT FORM -->
         <section id="contact" class="bg-gray-800 py-16 border-t border-gray-700">
@@ -139,7 +126,7 @@
                     Formulaire de contact
                 </h3>
 
-            
+
                 <form id="contactForm" class="bg-gray-700 p-8 rounded-xl shadow-xl space-y-4 border border-gray-600">
 
                     <div>
@@ -218,9 +205,6 @@
         // Recharge feather icons une fois le footer inséré
         feather.replace();
     </script>
-
-
-
     <!-- Load config BEFORE email sending script -->
     <script src="config.js"></script>
 

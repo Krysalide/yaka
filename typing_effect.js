@@ -1,35 +1,14 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const titleElement = document.getElementById('typing-title');
-//     // Le texte que vous voulez afficher progressivement
-//     const textToType = "Devenez maîtres du jeu avec vos propres IA en local"; 
-//     let charIndex = 0; // Index du caractère actuel
-//     const typingSpeed = 75; // Vitesse de frappe en millisecondes (plus petit = plus rapide)
 
-//     function typeWriter() {
-//         // Vérifie si tous les caractères n'ont pas été affichés
-//         if (charIndex < textToType.length) {
-//             // Ajoute le prochain caractère au contenu de l'élément
-//             titleElement.textContent += textToType.charAt(charIndex);
-//             charIndex++;
-            
-//             // Appelle la fonction à nouveau après un délai
-//             setTimeout(typeWriter, typingSpeed);
-//         }
-//     }
-
-//     // Lance l'effet de frappe après un court délai initial
-//     setTimeout(typeWriter, 500); 
-// });
 
 document.addEventListener('DOMContentLoaded', function() {
     const titleElement = document.getElementById('typing-title');
     const textToType = "Devenez maîtres du jeu avec vos propres IA en local"; 
     
     // Paramètres
-    const typingSpeed = 50;    // Vitesse de frappe (ms)
+    const typingSpeed = 100;    // Vitesse de frappe (ms)
     const deletingSpeed = 50;  // Vitesse d'effacement (ms)
-    const delayBeforeDelete = 5000; // Pause avant d'effacer (ms)
-    const delayBeforeType = 0;    // Pause avant de recommencer la frappe (ms)
+    const delayBeforeDelete = 5000000; // Pause avant d'effacer (ms)
+    const delayBeforeType = 50;    // Pause avant de recommencer la frappe (ms)
 
     let charIndex = 0;
     let isTyping = true; // Pour alterner entre les modes frappe et effacement

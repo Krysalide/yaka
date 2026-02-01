@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const titleElement = document.getElementById('typing-title');
-    const textToType = "Devenez maîtres du jeu avec votre IA"; // Texte à taper
+    const textToType = "Devenez maîtres du jeu sur l'IA d'entreprise"; // Texte à taper
     
     // Paramètres
     const typingSpeed = 100;    // Vitesse de frappe (ms)

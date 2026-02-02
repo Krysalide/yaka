@@ -36,6 +36,30 @@
         }
     </script>
     <style>
+        #typing-title::after {
+            content: '|';
+            margin-left: 4px;
+            animation: blink 1s infinite;
+        }
+
+        #typing-title.cursor::after {
+            opacity: 0;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50%,
+            100% {
+                opacity: 1;
+            }
+
+            25%,
+            75% {
+                opacity: 0;
+            }
+        }
+
         @keyframes fade {
 
             0%,
@@ -70,16 +94,16 @@
 <body class="bg-gradient-to-r from-slate-900 to-slate-800 text-gray-100 min-h-screen">
 
     <main class="container mx-auto px-4 py-12">
-                      
 
 
-            
+
+
         <!-- HERO -->
         <section class="hero mb-10 flex justify-center items-center ">
             <div class="text-center">
                 <div class="relative overflow-hidden">
                     <div class="flex justify-center mb-5">
-                    <img src="logo8.png" class="w-1200 h-300 border-4 border-slate-500 rounded-lg">
+                        <img src="logo8.png" class="w-1200 h-300 border-4 border-slate-500 rounded-lg">
                     </div>
                     <!-- <h1
                         class="hero-title text-6xl md:text-9xl lg:text-[12rem] py-5 px-10 leading-none font-extrabold bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent select-none">
@@ -126,9 +150,9 @@
                         Solutions avec GPU NVIDIA pour des performances optimales
                         <img src="gpu1.png" class="w-20 h-20" alt="">
                     </p>
-            </div>
+                </div>
         </section>
-        
+
 
         <!-- CONTACT FORM -->
         <section id="contact" class="bg-gray-800 py-5 border-t border-gray-700 ">
@@ -169,7 +193,7 @@
                 <p
                     class="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
                     📞 06 42 32 21 64 📞
-            </p>
+                </p>
             </div>
         </section>
 

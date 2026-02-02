@@ -2,12 +2,12 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     const titleElement = document.getElementById('typing-title');
-    const textToType = "Devenez maîtres du jeu sur l'IA d'entreprise"; // Texte à taper
+    const textToType = "Devenez maîtres du jeu de votre transition numérique"; // Texte à taper
     
     // Paramètres
     const typingSpeed = 100;    // Vitesse de frappe (ms)
     const deletingSpeed = 50;  // Vitesse d'effacement (ms)
-    const delayBeforeDelete = 5000000; // Pause avant d'effacer (ms)
+    const delayBeforeDelete = 50000; // Pause avant d'effacer (ms)
     const delayBeforeType = 50;    // Pause avant de recommencer la frappe (ms)
 
     let charIndex = 0;

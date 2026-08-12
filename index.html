@@ -96,122 +96,137 @@
     <main class="container mx-auto px-4 py-12">
 
         <!-- HERO -->
-        <section class="hero mb-10 flex justify-center items-center">
-            <div class="text-center">
-                <div class="relative overflow-hidden">
-                    <div class="flex justify-center mb-5">
-                        <img src="logo8.png" class="w-1200 h-300 border-4 border-slate-500 rounded-lg"
-                            alt="Logo ALPLLM">
-                    </div>
+        <section class="hero mb-5 flex justify-center items-center">
+    <div class="text-center">
+        <div class="relative overflow-hidden">
+            <div class="flex justify-center mb-10">
+                <img src="logo8.png" class="w-1100 h-280 border-4 border-slate-500 rounded-lg"
+                    alt="Logo ALPLLM">
+            </div>
 
-                    <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
-                        <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                            <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
-                                Serveurs de modèles de langage locaux
-                            </p>
-                            <p class="text-gray-400 text-sm mt-2">
-                                Vos LLM tournent dans vos locaux sur vos serveurs : confidentialité totale et garantie.
-                                Nous les dotons de capacités agentiques avancées avec des serveurs MCP et des bases de
-                                données vectorielles (RAG).
-                            </p>
-                        </div>
+            <!-- Block Lecteur Audio -->
+            <div class="max-w-xl mx-auto mb-8 p-4 bg-slate-800/50 rounded-xl border border-slate-700 shadow-lg">
+                <p class="text-white font-bold mb-3 uppercase tracking-wider text-xs">
+                    PRESENTATION HERMES
+                </p>
+                <audio controls class="w-full rounded-lg accent-indigo-500">
+                    <source src="henri_siteweb.wav" type="audio/wav">
+                    Votre navigateur ne prend pas en charge l'élément audio.
+                </audio>
+            </div>
 
-                        <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                            <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
-                                Audit et Formation
-                            </p>
-                            <p class="text-gray-400 text-sm mt-2">
-                                Forts de notre expérience, nous pouvons vous former aux nouveaux usages de l'IA et vous
-                                faire bénéficier de notre expertise
-                                pour que vous puissiez utiliser les techniques les plus récentes.
-                            </p>
-                        </div>
+            <div class="flex flex-col md:flex-row justify-center gap-6 mb-10">
+                <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                    <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
+                        Serveurs de modèles de langage locaux
+                    </p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Vos LLM tournent dans vos locaux sur vos serveurs : confidentialité totale et garantie.
+                        Nous les dotons de capacités agentiques avancées avec des serveurs MCP et des bases de
+                        données vectorielles (RAG).
+                    </p>
+                </div>
 
-                        <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
-                            <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
-                                Data engineering sur vos données
-                            </p>
-                            <p class="text-gray-400 text-sm mt-2">
-                                Nous vous aidons à passer le cap de la transition numérique : analyse exploratoire,
-                                construction de bases de données vectorielles,
-                                développement et entraînement de modèles de machine learning sur vos propres données.
-                            </p>
-                        </div>
-                    </div>
+                <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                    <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
+                        Audit et Formation
+                    </p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Forts de notre expérience, nous pouvons vous former aux nouveaux usages de l'IA et vous
+                        faire bénéficier de notre expertise
+                        pour que vous puissiez utiliser les techniques les plus récentes.
+                    </p>
+                </div>
 
-                    <h1 id="typing-title"
-                        class="text-3xl py-5 md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent min-h-[3.5rem] md:min-h-[4rem]">
-                    </h1>
-
-                    <script src="typing_effect.js"></script>
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mb-16 text-center">
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Sécurité & Confidentialité</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Sortez du cloud, protégez vos données et celles de vos clients avec un hébergement 100 %
-                                local.
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-primary-500/30 rounded-2xl hover:border-primary-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Serveurs MCP</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Capacités agentiques avancées pour automatiser vos flux de travail. Outils adaptés aux
-                                besoins de votre corps de métier.
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Souveraineté Logicielle</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Une stack 100 % open source basée sur Linux pour une indépendance technologique totale.
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-secondary-500/30 rounded-2xl hover:border-secondary-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Développement durable</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Solutions durables avec des serveurs utilisant des composants reconditionnés haute
-                                performance.
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Une équipe proche de vous</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Nous accompagnons les entreprises du bassin grenoblois pour garantir un suivi de
-                                proximité et de qualité.
-                            </p>
-                        </div>
-
-                        <div
-                            class="p-6 bg-slate-800/30 border border-primary-500/30 rounded-2xl hover:border-primary-500/60 transition-colors">
-                            <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
-                                style="font-size: 0.8rem;">Expertise hardware et software</p>
-                            <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
-                                Nous assemblons des PC optimisés pour l'IA. Nous maîtrisons à la fois la conception
-                                matérielle, la configuration et les algorithmes.
-                            </p>
-                        </div>
-
-                    </div>
+                <div class="flex-1 p-4 bg-slate-800/50 rounded-xl border border-slate-700">
+                    <p class="text-white font-semibold text-lg" style="font-size: 1.25rem;">
+                        Agents IA
+                    </p>
+                    <p class="text-gray-400 text-sm mt-2">
+                        Bénéficiez de notre expertise sur les agents IA. Nous proposons notamment la création d'agents Hermes sur VPS. Nous pouvons aussi développer des solutions sur mesure (Langchain)
+                    </p>
                 </div>
             </div>
-        </section>
 
+            <h1 id="typing-title"
+                class="text-3xl py-5 md:text-5xl font-bold mb-6 bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent min-h-[3.5rem] md:min-h-[4rem]">
+            </h1>
 
+            <script src="typing_effect.js"></script>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 mb-16 text-center">
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Sécurité & Confidentialité</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Sortez du cloud, protégez vos données et celles de vos clients avec un hébergement 100 %
+                        local.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-primary-500/30 rounded-2xl hover:border-primary-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Serveurs MCP</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Capacités agentiques avancées pour automatiser vos flux de travail. Outils adaptés aux
+                        besoins de votre corps de métier.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Souveraineté Logicielle</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Une stack 100 % open source basée sur Linux pour une indépendance technologique totale.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-secondary-500/30 rounded-2xl hover:border-secondary-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Développement durable</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Solutions durables avec des serveurs utilisant des composants reconditionnés haute
+                        performance.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-indigo-500/30 rounded-2xl hover:border-indigo-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Une équipe proche de vous</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Nous accompagnons les entreprises du bassin grenoblois pour garantir un suivi de
+                        proximité et de qualité.
+                    </p>
+                </div>
+
+                <div
+                    class="p-6 bg-slate-800/30 border border-primary-500/30 rounded-2xl hover:border-primary-500/60 transition-colors">
+                    <p class="text-indigo-400 font-bold mb-2 uppercase tracking-wider"
+                        style="font-size: 0.8rem;">Expertise hardware et software</p>
+                    <p class="text-white leading-relaxed" style="font-size: 1.1rem;">
+                        Nous assemblons des PC optimisés pour l'IA. Nous maîtrisons à la fois la conception
+                        matérielle, la configuration et les algorithmes.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- <p class="text-white leading-relaxed" style="font-size: 2rem;">
+                Notre nouvel offre de VPS avec hermes-agent: obtenez rapidement le meilleur de l'IA
+            </p>
+        <div class="flex justify-center mb-2 mt-2">
+            
+            <img src="hermes-agent-bannerv2.png" class="w-1200 h-300 border-4 border-slate-500 rounded-lg"
+                alt="Logo ALPLLM">
+        </div> -->
 
         <!-- CONTACT FORM -->
         <section id="contact" class="bg-gray-800 py-5 border-t border-gray-700 ">
@@ -326,4 +341,3 @@
 </body>
 
 </html>
-

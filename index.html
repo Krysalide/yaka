@@ -228,22 +228,15 @@
         </div>
     </div>
 </section>
-        <!-- <p class="text-white leading-relaxed" style="font-size: 2rem;">
-                Notre nouvel offre de VPS avec hermes-agent: obtenez rapidement le meilleur de l'IA
-            </p>
-        <div class="flex justify-center mb-2 mt-2">
-            
-            <img src="hermes-agent-bannerv2.png" class="w-1200 h-300 border-4 border-slate-500 rounded-lg"
-                alt="Logo ALPLLM">
-        </div> -->
+       
 
         <!-- CONTACT FORM -->
-        <section id="contact" class="bg-gray-800 py-5 border-t border-gray-700 ">
+        <section id="contact" class="bg-gray-1000 py-5 ">
             <div class="container mx-auto max-w-lg">
 
                 <h3
-                    class="text-6xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
-                    Formulaire de contact
+                    class="text-5xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                    Contact
                 </h3>
                 <form id="contactForm" class="bg-gray-700 p-8 rounded-xl shadow-xl space-y-4 border border-gray-600">
 
@@ -277,6 +270,19 @@
                     class="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
                     📞 06 42 32 21 64
                 </p>
+                <div class="flex flex-wrap items-center justify-center gap-3 mb-4">
+                    <p
+                        class="text-2xl font-bold text-center bg-gradient-to-r from-primary-500 to-secondary-500 bg-clip-text text-transparent">
+                        <span id="emailAddress">christophe.delapierre@alpllm.fr</span>
+                    </p>
+                    <button id="copyEmailButton" type="button"
+                        class="inline-flex items-center gap-2 whitespace-nowrap bg-gray-700 text-gray-100 font-semibold px-4 py-2 rounded-lg hover:bg-gray-600 transition"
+                        aria-label="Copier l'adresse e-mail">
+                        <i data-feather="copy" class="w-4 h-4"></i>
+                        
+                    </button>
+                    <span id="copyEmailStatus" class="sr-only" role="status" aria-live="polite"></span>
+                </div>
             </div>
         </section>
 
@@ -342,6 +348,32 @@
                     statusMessage.className = "text-red-500 font-semibold text-center";
                 });
 
+        });
+
+        document.getElementById("copyEmailButton").addEventListener("click", async function () {
+            const email = document.getElementById("emailAddress").textContent.trim();
+            const status = document.getElementById("copyEmailStatus");
+
+            try {
+                await navigator.clipboard.writeText(email);
+            } catch (error) {
+                const temporaryInput = document.createElement("textarea");
+                temporaryInput.value = email;
+                temporaryInput.setAttribute("readonly", "");
+                temporaryInput.style.position = "fixed";
+                temporaryInput.style.opacity = "0";
+                document.body.appendChild(temporaryInput);
+                temporaryInput.select();
+                document.execCommand("copy");
+                temporaryInput.remove();
+            }
+
+            status.textContent = "Adresse e-mail copiée";
+            this.setAttribute("aria-label", "Adresse e-mail copiée");
+            setTimeout(() => {
+                status.textContent = "";
+                this.setAttribute("aria-label", "Copier l'adresse e-mail");
+            }, 2000);
         });
     </script>
 
